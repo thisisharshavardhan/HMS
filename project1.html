@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .student-info {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .student-info img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .student-details {
+            flex: 1;
+        }
+
+        .student-info .additional-photo {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin: 10px 0;
+            color: #333;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Center text in table cells */
+        table td {
+            vertical-align: middle;
+        }
+
+        /* Center-align headings in each year section */
+        table caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <div class="student-info">
+        <img src="R.jpg" alt="Student Photo" width="400">
+        <div class="student-details">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Pin Number:</strong> 12345</p>
+            <p><strong>Department:</strong> Computer Science</p>
+            <p><strong>Batch:</strong> 2023</p>
+            <p><strong>Father Name:</strong> Father</p>
+            <p><strong>Mother Name:</strong> Father</p>
+            <p><strong>Student Phone:</strong> 943104923</p>
+            <p><strong>Father Phone:</strong> 943104923</p>
+            <p><strong>Mother Phone:</strong> 943104923</p>
+        </div>
+        <img class="additional-photo" src="another-photo.jpg" alt="Additional Photo" width="200">
+        <p><strong>Guardian Name:</strong> Father</p>
+    </div>
+
+    <!-- 1st Year -->
+    <table>
+        <caption>1st Semester</caption>
+        <tr>
+            <th>Subject</th>
+            <th>Unit 1</th>
+            <th>Unit 2</th>
+            <th>Unit 3</th>
+            <th>Semester 1</th>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>CF</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>Chemistry</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>Mathematics</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>English</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <!-- Add your data here for other subjects -->
+    </table>
+
+    <!-- 2nd Year -->
+    <table>
+        <caption>3rd Semester</caption>
+        <tr>
+            <th>Subject</th>
+            <th>Unit 1</th>
+            <th>Unit 2</th>
+            <th>Unit 3</th>
+            <th>Semester 1</th>
+        </tr>
+        <tr>
+            <td>DS</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>DE</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>O.S</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>DBMS</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>Mathematics</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+
+        <!-- Add your data here for other subjects -->
+    </table>
+
+    <!-- 3rd Year -->
+    <table>
+        <caption>4th Semester</caption>
+        <tr>
+            <th>Subject</th>
+            <th>Unit 1</th>
+            <th>Unit 2</th>
+            <th>Unit 3</th>
+            <th>Semester 1</th>
+        </tr>
+        <tr>
+            <td>C.N</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>WT</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>C++</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>C.O.M.P</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>Mathematics</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <!-- Add your data here for other subjects -->
+    </table>
+
+    <!-- 5th Semester -->
+    <table>
+        <caption>5th Semester</caption>
+        <tr>
+            <th>Subject</th>
+            <th>Unit 1</th>
+            <th>Unit 2</th>
+            <th>Unit 3</th>
+            <th>Semester 1</th>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>IOT</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>SE</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <tr>
+            <td>IME</td>
+            <td>90</td>
+            <td>80</td>
+            <td>98</td>
+            <td>90</td>
+
+        </tr>
+        <!-- Add your data here for other subjects -->
+    </table>
+</body>
+</html>
