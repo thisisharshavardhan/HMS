@@ -82,9 +82,6 @@
         function toggleadd(){
             document.getElementById('popup-1').classList.toggle("active");
         }
-        function toggleud(){
-            document.getElementById('popup-2').classList.toggle("active");
-        }
     </script>
 </head>
 
@@ -113,9 +110,8 @@
         <ul class="navbar-nav" style="display: flex; flex-direction: row;">
                 <!-- Add your navigation links here -->
                 <li class="nav-item"style="margin-right: 15px; margin-left: 15px"><button class="button-60" role="button" onclick="toggleadd()">ADD</button></li>
-                <li class="nav-item"style="margin-right: 15px;"><button class="button-60" role="button">Update</button></li>
+                <li class="nav-item"style="margin-right: 15px;"><button class="button-60" role="button" onclick="">Update Marks</button></li>
                 <li class="nav-item"style="margin-right: 15px;"><button class="button-60" role="button">Vacate</button></li>
-                <li class="nav-item"style="margin-right: 15px;"><button class="button-60" role="button" onclick="toggleud()">View Mid marks</button></li>
                 <form id="searchform" method="post" action="studentdetails.php">
                     <input type="search" name="pin" id="pin" placeholder="Enter Pin">
                     <button type="submit" >search</button>
@@ -185,27 +181,6 @@
                 <button type="Submit" id="subbtn" class="button-60">Submit</button>
                 <br><br><br><br><br>
             </form>
-        </div>
-    </div>
-    <!-- <div class="popup" id="popup-2">
-        <div class="overlay"></div>
-        <div class="content">
-            <div class="close-btn" onclick="toggleresult()">&times;</div>
-            <h3 >Student Details</h3>
-            <br><br>
-            <img src=".\assets\img\products\1.jpg" alt=" " width="20%">&emsp;&emsp;&emsp;&emsp;&emsp;
-            <b></b>
-            
-        </div>
-    </div> -->
-    <div class="popup" id="popup-2">
-        <div class="overlay"></div>
-        <div class="content">
-            <div class="close-btn" onclick="toggleud()">&times;</div>
-            <h3 >Marks List</h3>
-            
-            <br>
-            
         </div>
     </div>
     <footer class="bg-dark"></footer>
