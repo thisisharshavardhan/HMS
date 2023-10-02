@@ -45,12 +45,58 @@
             font-size: 16px;
             cursor: pointer;
         }
+        input[type="file"] {
+            margin-top: 10px;
+        }
     </style>
+    <script>
+        function updateExamOptions() {
+            var yearSelect = document.getElementById("year");
+            var examSelect = document.getElementById("exam");
+            examSelect.innerHTML = "";
+            var mid1Option = document.createElement("option");
+            mid1Option.value = "mid1";
+            mid1Option.text = "Mid1";
+            examSelect.add(mid1Option);
+            var mid2Option = document.createElement("option");
+            mid2Option.value = "mid2";
+            mid2Option.text = "Mid2";
+            examSelect.add(mid2Option);
+            var semOption = document.createElement("option");
+            semOption.value = "sem";
+            semOption.text = "Sem";
+            examSelect.add(semOption);
+            if (yearSelect.value === "2") {
+                examSelect.add(mid1Option);
+                examSelect.add(mid2Option);
+                examSelect.add(semOption);
+            } else if (yearSelect.value === "3") {
+                examSelect.add(mid1Option);
+                examSelect.add(mid2Option);
+                examSelect.add(semOption);
+            } if (yearSelect.value === "1") {
+            var mid3Option = document.createElement("option");
+            mid3Option.value = "mid3";
+            mid3Option.text = "Mid3";
+            examSelect.add(mid3Option);
+        }
+        }
+        updateExamOptions();
+    </script>
 </head>
 <body>
-<form>
+<form method="post" enctype="multipart/form-data" action="uploadmark.php">
+<label for="branch">Branch:</label>
+        <select id="branch" name="branch">
+            <option value="CME">CME</option>
+            <option value="ECE">ECE</option>
+            <option value="AIML">AIML</option>
+            <option value="EEE">EEE</option>
+            <option value="C">C</option>
+            <option value="M">M</option>
+        </select>
         <label for="year">Year:</label>
-        <select id="year" name="year">
+        <select id="year" name="year" onchange="updateExamOptions()">
             <option value="1">1st Year</option>
             <option value="2">2nd Year</option>
             <option value="3">3rd Year</option>
@@ -59,8 +105,12 @@
         <select id="exam" name="exam">
             <option value="mid1">Mid 1</option>
             <option value="mid2">Mid 2</option>
+            <option value="mid3">Mid 3</option>
+            <option value="sem">Sem</option>
         </select>
+        <input type="file" name="file">
         <input type="submit" value="Submit">
     </form>
+    <p>Note: make sure that the excel file have pin number in first column and all subjects in order</p>
 </body>
 </html>

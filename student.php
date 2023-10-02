@@ -110,7 +110,7 @@
         <ul class="navbar-nav" style="display: flex; flex-direction: row;">
                 <!-- Add your navigation links here -->
                 <li class="nav-item"style="margin-right: 15px; margin-left: 15px"><button class="button-60" role="button" onclick="toggleadd()">ADD</button></li>
-                <li class="nav-item"style="margin-right: 15px;"><button class="button-60" role="button" onclick="">Update Marks</button></li>
+                <li class="nav-item"style="margin-right: 15px;"><button class="button-60" role="button" onclick="window.location.href='update.php'">Update Marks</button></li>
                 <li class="nav-item"style="margin-right: 15px;"><button class="button-60" role="button">Vacate</button></li>
                 <form id="searchform" method="post" action="studentdetails.php">
                     <input type="search" name="pin" id="pin" placeholder="Enter Pin">
