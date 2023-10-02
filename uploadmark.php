@@ -7,6 +7,7 @@
     require 'vendor/autoload.php';
     use PhpOffice\PhpSpreadsheet\IOFactory;
     use PhpOffice\PhpSpreadsheet\Spreadsheet;
+    use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
     $branch = $_POST['branch'];
     $year = $_POST['year'];
     $exam = $_POST['exam'];
@@ -28,7 +29,7 @@
                         $value = $cell->getValue();
                         $rowData[] = $value;
                     }
-                    $sql = "INSERT INTO mid1cme (101,102,103,104,105,106) VALUES ('$rowData[1]', '$rowData[2]', '$rowData[3]', '$rowData[4]', '$rowData[5]', '$rowData[6]') where pin = $rowData[0]" ;
+                    $sql = "INSERT INTO _marks (101,102,103,104,105,106) VALUES ('$rowData[1]', '$rowData[2]', '$rowData[3]', '$rowData[4]', '$rowData[5]', '$rowData[6]') where pin = $rowData[0]" ;
                 }
             }
             else if($branch == "ECE"){

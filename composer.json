@@ -1,12 +1,12 @@
 {
-    "name": "myvendor/mypackage",
+    "name": "your-vendor-name/your-project-name",
     "description": "Hostel Management System",
     "require": {
-        "php": ">=7.2"
+        "phpoffice/phpspreadsheet": "^1.17"
     },
     "autoload": {
         "psr-4": {
-            "KHV\\": "src/"
+            "YourNamespace\\": "src/"
         }
     }
 }
