@@ -49,15 +49,8 @@
                             echo "Error updating record with PIN $pin: " . mysqli_error($conn) . "<br>";
                         }
                     } else {
-                        // Insert a new record
-                        $insertSql = "INSERT INTO _marks (pin, `101`, `102`, `103`, `104`, `105`, `106`) 
-                                      VALUES ('$pin', '$rowData[1]', '$rowData[2]', '$rowData[3]', '$rowData[4]', '$rowData[5]', '$rowData[6]')";
-                        
-                        if (mysqli_query($conn, $insertSql)) {
-                            echo "New record with PIN $pin inserted successfully.<br>";
-                        } else {
-                            echo "Error inserting new record with PIN $pin: " . mysqli_error($conn) . "<br>";
-                        }
+                        // Skip inserting new records
+                        echo "Record with PIN $pin not found in the database. Skipping insertion.<br>";
                     }
                 }
                 
