@@ -1,5 +1,4 @@
 <?php
-
     session_start();
     if (!(isset($_SESSION['Logged_in']))) {
         header("location: index.php");
@@ -15,7 +14,7 @@
     $spreadsheet = IOFactory::load($excelfile);
     $worksheet = $spreadsheet->getActiveSheet();
 
-    $conn = mysqli_connect("localhost", "root", "", "student");
+    $conn = mysqli_connect("localhost", "root", "", "hostel");
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
@@ -27,10 +26,41 @@
                     $rowData = [];
                     foreach ($row->getCellIterator() as $cell) {
                         $value = $cell->getValue();
-                        $rowData[] = $value;
+                        $rowData[] = mysqli_real_escape_string($conn, $value); // Sanitize user input
                     }
-                    $sql = "INSERT INTO _marks (101,102,103,104,105,106) VALUES ('$rowData[1]', '$rowData[2]', '$rowData[3]', '$rowData[4]', '$rowData[5]', '$rowData[6]') where pin = $rowData[0]" ;
+                    
+                    // Assuming 'pin' is a column in your table
+                    $pin = mysqli_real_escape_string($conn, $rowData[0]); // Sanitize user input
+                    
+                    // Check if a record with the same 'pin' exists in the table
+                    $checkSql = "SELECT COUNT(*) AS count FROM _marks WHERE pin = '$pin'";
+                    $result = mysqli_query($conn, $checkSql);
+                    $rowCount = mysqli_fetch_assoc($result)['count'];
+                    
+                    if ($rowCount > 0) {
+                        // Update the existing record
+                        $updateSql = "UPDATE _marks 
+                                      SET `101` = '$rowData[1]', `102` = '$rowData[2]', `103` = '$rowData[3]', `104` = '$rowData[4]', `105` = '$rowData[5]', `106` = '$rowData[6]'
+                                      WHERE pin = '$pin'";
+                        
+                        if (mysqli_query($conn, $updateSql)) {
+                            echo "Record with PIN $pin updated successfully.<br>";
+                        } else {
+                            echo "Error updating record with PIN $pin: " . mysqli_error($conn) . "<br>";
+                        }
+                    } else {
+                        // Insert a new record
+                        $insertSql = "INSERT INTO _marks (pin, `101`, `102`, `103`, `104`, `105`, `106`) 
+                                      VALUES ('$pin', '$rowData[1]', '$rowData[2]', '$rowData[3]', '$rowData[4]', '$rowData[5]', '$rowData[6]')";
+                        
+                        if (mysqli_query($conn, $insertSql)) {
+                            echo "New record with PIN $pin inserted successfully.<br>";
+                        } else {
+                            echo "Error inserting new record with PIN $pin: " . mysqli_error($conn) . "<br>";
+                        }
+                    }
                 }
+                
             }
             else if($branch == "ECE"){
 
