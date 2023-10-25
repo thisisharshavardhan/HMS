@@ -158,14 +158,30 @@ if (!(isset($_SESSION['Logged_in']))) {
         </tr>
         <tr>
             <td>101</td>
-            <td></td>
+            <td>
+                <?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['101'];
+                ?>
+            </td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>102</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['102'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>
@@ -173,7 +189,14 @@ if (!(isset($_SESSION['Logged_in']))) {
         </tr>
         <tr>
             <td>103</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['103'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>
@@ -181,7 +204,14 @@ if (!(isset($_SESSION['Logged_in']))) {
         </tr>
         <tr>
             <td>104</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['104'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>
@@ -189,7 +219,14 @@ if (!(isset($_SESSION['Logged_in']))) {
         </tr>
         <tr>
             <td>105</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['105'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>
@@ -197,7 +234,14 @@ if (!(isset($_SESSION['Logged_in']))) {
         </tr>
         <tr>
             <td>106</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['106'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>
@@ -205,28 +249,56 @@ if (!(isset($_SESSION['Logged_in']))) {
         </tr>
         <tr>
             <td>107</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['107'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>108</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['108'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>109</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['109'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>110</td>
-            <td></td>
+            <td><?php
+                $sql = "select * from _marks where pin='$pinn'";
+                $resultt = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($resultt) == 1) {
+                    $row = mysqli_fetch_assoc($resultt);
+                }
+                echo $row['110'];
+                ?></td>
             <td></td>
             <td></td>
             <td></td>

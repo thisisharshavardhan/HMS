@@ -27,7 +27,7 @@ if(mysqli_num_rows($result) === 1){
         $_SESSION['username'] = $row['username'];
         $_SESSION['ID'] = $row['sno'];
         $_SESSION['Logged_in'] = true;
-        $_SESSION['previlage'] = $row['previlage'];
+        $_SESSION['previlage'] = $row['privilage'];
         header('Location: '.$uri.'Welcome.php');
         // header("Location: Home.php");
     }
