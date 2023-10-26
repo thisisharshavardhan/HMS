@@ -49,7 +49,7 @@
             margin-top: 10px;
         }
     </style>
-    <script>
+    <!-- <script>
         function updateExamOptions() {
             var yearSelect = document.getElementById("year");
             var examSelect = document.getElementById("exam");
@@ -82,23 +82,15 @@
         }
         }
         updateExamOptions();
-    </script>
+    </script> -->
 </head>
 <body>
 <form method="post" enctype="multipart/form-data" action="uploadmark.php">
-<label for="branch">Branch:</label>
-        <select id="branch" name="branch">
-            <option value="CME">CME</option>
-            <option value="ECE">ECE</option>
-            <option value="AIML">AIML</option>
-            <option value="EEE">EEE</option>
-            <option value="C">C</option>
-            <option value="M">M</option>
-        </select>
         <label for="year">Year:</label>
-        <select id="year" name="year" onchange="updateExamOptions()">
+        <select id="year" name="year" >
             <option value="1">1st Year</option>
-            <option value="2">2nd Year</option>
+            <option value="2">2nd Year ( 3rd Sem )</option>
+            <option value="4">2nd Year ( 4rd Sem )</option>
             <option value="3">3rd Year</option>
         </select>
         <label for="exam">Exam:</label>

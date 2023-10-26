@@ -92,6 +92,18 @@ if (!(isset($_SESSION['Logged_in']))) {
             margin: 10px 0;
             text-align: center;
         }
+
+        .parent-div {
+  display: flex;
+  justify-content: center; /* Center-align child divs */
+}
+
+.child-div {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
     </style>
 </head>
 
@@ -117,20 +129,38 @@ if (!(isset($_SESSION['Logged_in']))) {
         $gardian_base64 = base64_encode($gardian_blob);
         $image_mime_type = 'image/jpeg';
         $data_uri2 = "data:$image_mime_type;base64,$gardian_base64";
+        $motherphoto_blob = $row['motherphoto'];
+        $motherphoto_base64 = base64_encode($motherphoto_blob);
+        $image_mime_type = 'image/jpeg';
+        $data_uri3 = "data:$image_mime_type;base64,$motherphoto_base64";
+        $fatherphoto_blob = $row['fatherphoto'];
+        $fatherphoto_base64 = base64_encode($fatherphoto_blob);
+        $image_mime_type = 'image/jpeg';
+        $data_uri4 = "data:$image_mime_type;base64,$fatherphoto_base64";
         ?>
-        <img src="<?php echo $data_uri; ?>" alt="Student Photo" width="400">
-        <div class="student-details">
-            <p><strong>Name:</strong> <?php echo $row["student_name"]; ?></p>
-            <p><strong>Pin Number:</strong> <?php echo $row["student_pinno"]; ?></p>
-            <p><strong>Father Name:</strong> <?php echo $row["father_name"]; ?></p>
-            <p><strong>Mother Name:</strong> <?php echo $row["mother_name"]; ?></p>
-            <p><strong>Student Phone:</strong> <?php echo $row["student_phone"]; ?></p>
-            <p><strong>Father Phone:</strong> <?php echo $row["father_phone"]; ?></p>
-            <p><strong>Mother Phone:</strong> <?php echo $row["mother_phone"]; ?></p>
+        <div class="parent-div">
+            <div class="child-div"  >
+                <img src="<?php echo $data_uri; ?>" alt="Student Photo" width="400">
+                <p><strong>Name:</strong> <?php echo $row["student_name"]; ?></p>
+                <p><strong>Pin Number:</strong> <?php echo $row["student_pinno"]; ?></p>
+                <p><strong>Student Phone:</strong> <?php echo $row["student_phone"]; ?></p>
+            </div>
+            <div class="child-div">
+                <img class="additional-photo" src="<?php echo $data_uri2; ?>" alt="Additional Photo" width="200">
+                <p><strong>Guardian Name:</strong> <?php echo $row["gardian_name"]; ?></p>
+                <p><strong>Guardian Phone:</strong> <?php echo $row["gardian_phone"]; ?></p>
+            </div>
+            <div class="child-div">
+                <img class="additional-photo" src="<?php echo $data_uri3; ?>" alt="Additional Photo" width="200">
+                <p><strong>Mother Name:</strong> <?php echo $row["mother_name"]; ?></p>
+                <p><strong>Mother Phone:</strong> <?php echo $row["mother_phone"]; ?></p>
+            </div>
+            <div class="child-div">
+                <img class="additional-photo" src="<?php echo $data_uri4; ?>" alt="Additional Photo" width="200">
+                <p><strong>Father Name:</strong> <?php echo $row["father_name"]; ?></p>
+                <p><strong>Father Phone:</strong> <?php echo $row["father_phone"]; ?></p>
+            </div>
         </div>
-        <img class="additional-photo" src="<?php echo $data_uri2; ?>" alt="Additional Photo" width="200">
-        <p><strong>Guardian Name:</strong> <?php echo $row["gardian_name"]; ?></p>
-        <p><strong>Guardian Phone:</strong> <?php echo $row["gardian_phone"]; ?></p>
     </div> <!-- 1st Year -->
     <?php
     $sql = "select * from _marks where pin = '$pinn'";
@@ -414,7 +444,11 @@ if (!(isset($_SESSION['Logged_in']))) {
                 echo $row['m2_303'];
                 ?>
             </td>
-            <td></td>
+            <td>
+                <?php
+                echo $row['s_303'];
+                ?>
+            </td>
         </tr>
         <tr>
             <td>304</td>
