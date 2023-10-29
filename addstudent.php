@@ -58,6 +58,6 @@ if($resultt){
     header("Location: student.php");
 }
 else{
-    echo "Student Addition Failed";
+    echo "Student Adding Failed";
 }
 ?>
